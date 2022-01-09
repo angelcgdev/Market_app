@@ -11,7 +11,7 @@ feel free to make suggestions to improve the code.
 
 
 ## design:
-- [Marker Mobile App](https://fb.watch/aop2ba2V26/)
+- [Store Mobile App](https://fb.watch/aop2ba2V26/)
 
 ## packages used:
 - [provider](https://pub.dev/packages/provider)
