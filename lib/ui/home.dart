@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage>
 
     _animationController = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 1000),
+      duration: const Duration(milliseconds: defaultDuration),
     );
     _animationController.addListener(_animationControllerListener);
   }
@@ -58,25 +58,22 @@ class _HomePageState extends State<HomePage>
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: _theme.backgroundColor,
-      body: _body(),
+      body: Stack(
+        alignment: AlignmentDirectional.center,
+        children: [
+          MyTitle(sizeHamburguerMenu: _sizeHamburguerMenu),
+          Body(sizeHamburguerMenu: _sizeHamburguerMenu),
+          SearchButton(sizeHamburguerMenu: _sizeHamburguerMenu, theme: _theme),
+          MyDrawer(animationController: _animationController),
+          HamburgerMenuButton(
+            sizeButtom: _sizeHamburguerMenu,
+            animationController: _animationController,
+          ),
+        ],
+      ),
     );
   }
 
-  Widget _body() {
-    return Stack(
-      alignment: AlignmentDirectional.center,
-      children: [
-        MyTitle(sizeHamburguerMenu: _sizeHamburguerMenu),
-        Body(sizeHamburguerMenu: _sizeHamburguerMenu),
-        SearchButton(sizeHamburguerMenu: _sizeHamburguerMenu, theme: _theme),
-        MyDrawer(animationController: _animationController),
-        HamburgerMenuButton(
-          sizeButtom: _sizeHamburguerMenu,
-          animationController: _animationController,
-        ),
-      ],
-    );
-  }
 }
 
 class Body extends StatelessWidget {
