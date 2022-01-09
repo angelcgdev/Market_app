@@ -4,8 +4,9 @@ this is a challenge for the community [Flutter & Dart en Español](https://www.f
 feel free to make suggestions to improve the code.
 
 
+![bank app](https://user-images.githubusercontent.com/77682546/148671857-f0530fed-1726-41c0-ae86-ba8db303a1c0.gif)
 
-https://user-images.githubusercontent.com/77682546/148671618-9acec5c9-0413-4597-8008-1ba26e80c749.mp4
+
 
 
 
